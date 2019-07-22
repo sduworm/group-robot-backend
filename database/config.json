@@ -1,0 +1,24 @@
+{
+  "注释":"这个文件在执行npx命令时有用。工程数据库配置不在这。",
+  "development": {
+    "username": "throwing",
+    "password": "throwing_throwing",
+    "database": "fixed-throwing",
+    "host": "www.songshuyang.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "throwing",
+    "password": "throwing_throwing",
+    "database": "fixed-throwing",
+    "host": "www.songshuyang.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "throwing",
+    "password": "throwing_throwing",
+    "database": "fixed-throwing",
+    "host": "www.songshuyang.com",
+    "dialect": "mysql"
+  }
+}
