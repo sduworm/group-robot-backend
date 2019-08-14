@@ -1,31 +1,11 @@
 'use strict';
 
-exports.passport = {
+exports.nunjucks = {
   enable: true,
-  package: 'egg-passport',
+  package: 'egg-view-nunjucks',
 };
-
-exports.passportWeibo = {
-  enable: true,
-  package: 'egg-passport-weibo',
-};
-
-// exports.passportTwitter = {
-//   enable: true,
-//   package: 'egg-passport-twitter',
-// };
-
-exports.passportGithub = {
-  enable: true,
-  package: 'egg-passport-github',
-};
-
-// exports.passportBitbucket = {
-//   enable: true,
-//   package: 'egg-passport-bitbucket',
-// };
 
 exports.sequelize = {
-    enable: true,
-    package: 'egg-sequelize',
+  enable: true,
+  package: 'egg-sequelize',
 };
