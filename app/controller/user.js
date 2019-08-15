@@ -15,20 +15,18 @@ class UserController extends Controller {
     ctx.body = { status: 'ok' };
   }
 
-  async login(user) {
-    // TODO
-    const ctx = this.ctx;
-    ctx.model.User.findOne({
-      where: {
-        username: user.userName,
-      },
-      include: [{
-        model: ctx.model.Password,
-        where: { user_id: Sequelize.col('user.id'), password: md5(user.password) },
-      }],
-    });
+  async ddLogin() {
+    const { ctx, service } = this;
+    const { query } = ctx;
+    const { code } = query;
+    const ddUser = await service.user.getDDUserInfoByCode(code);
+    if (!ddUser) {
+      ctx.redirect(ctx.get('referer') || '/error');
+      return;
+    }
+    const user = await service.user.findOrCreateUser(ddUser, 'dd');
+    console.log('user:::', user);
 
-    ctx.login(user);
     ctx.redirect(ctx.get('referer') || '/');
   }
 

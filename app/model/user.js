@@ -5,6 +5,8 @@ module.exports = app => {
 
   return app.model.define('user', {
     id: { type: STRING(100), primaryKey: true },
+    openId: STRING(100),
+    origin: STRING(10),
     name: STRING(100),
     displayName: STRING(100),
     password: STRING(30),
@@ -12,7 +14,7 @@ module.exports = app => {
     telephone: STRING(20),
     photo: STRING(100),
     provider: STRING(100),
-    created_at: DATE,
-    updated_at: DATE,
+    createdAt: DATE,
+    updatedAt: DATE,
   });
 };

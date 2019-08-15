@@ -1,5 +1,7 @@
 'use strict';
 
+const { DD_CONFIG } = require('./config.dd.js');
+
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -9,13 +11,15 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  config.DD_CONFIG = DD_CONFIG;
+
   config.sequelize = {
     dialect: 'mysql',
     host: 'www.songshuyang.com',
     port: 3306,
-    database: 'fixed-throwing',
-    username: 'throwing',
-    password: 'throwing_throwing',
+    database: 'group-robot',
+    username: 'group-robot',
+    password: 'group-robot',
   };
 
   config.security = {
