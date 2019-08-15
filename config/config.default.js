@@ -9,7 +9,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1535036213132_6720';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = [ 'auth' ];
 
   config.DD_CONFIG = DD_CONFIG;
 

@@ -1,6 +1,5 @@
 'use strict';
 
-// const passportInit = require('./passportInit');
 
 module.exports = app => {
   app.router.get('/', 'home.render');
@@ -11,5 +10,4 @@ module.exports = app => {
   app.router.get('/api/user/get_auth', 'user.getAuthorization');
   app.router.get('/api/user/current', 'user.getCurrentUser');
   app.router.get('/api/currentUser', 'user.getCurrentUser');
-  // passportInit(app.passport);
 };

@@ -10,7 +10,6 @@
     "egg-view-nunjucks": "^2.2.0",
     "md5": "^2.2.1",
     "mysql2": "^1.6.1",
-    "passport": "^0.4.0",
     "urlencode": "^1.1.0"
   },
   "devDependencies": {

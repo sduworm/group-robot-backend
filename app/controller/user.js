@@ -21,11 +21,11 @@ class UserController extends Controller {
     const { code } = query;
     const ddUser = await service.user.getDDUserInfoByCode(code);
     if (!ddUser) {
-      ctx.redirect(ctx.get('referer') || '/error');
+      ctx.redirect(ctx.get('referer') || '/#/404');
       return;
     }
     const user = await service.user.findOrCreateUser(ddUser, 'dd');
-    console.log('user:::', user);
+    ctx.session.user = user;
 
     ctx.redirect(ctx.get('referer') || '/');
   }
