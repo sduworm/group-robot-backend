@@ -38,12 +38,9 @@ class UserController extends Controller {
   }
 
   async getCurrentUser() {
-    const { ctx, service } = this;
-    const { user } = ctx.session.passport;
-    const currentUser = await service.user.query(user.id);
-    currentUser.dataValues.avatar = user.photo;
-    currentUser.dataValues.userid = user.id;
-    ctx.body = currentUser;
+    const { ctx } = this;
+    const { user } = ctx.session;
+    ctx.body = user;
   }
 }
 

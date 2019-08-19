@@ -41,7 +41,6 @@ class UserService extends Service {
     const { nick, openid } = user;
     const users = await this.ctx.model.User.findOrCreate({
       where: {
-        id: `${origin}_${openid}`,
         openId: openid,
       },
       defaults: {
