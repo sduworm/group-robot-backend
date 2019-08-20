@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = app => {
-  const { STRING, DATE } = app.Sequelize;
+  const { INTEGER, STRING, DATE } = app.Sequelize;
 
   return app.model.define('users', {
-    id: { type: STRING(100), primaryKey: true, autoIncrement: true },
+    id: { type: INTEGER(20), primaryKey: true, autoIncrement: true },
     openId: STRING(100),
     origin: STRING(10),
     name: STRING(100),

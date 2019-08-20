@@ -1,7 +1,6 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-const md5 = require('md5');
 
 class UserController extends Controller {
   async logout() {
