@@ -9,4 +9,5 @@ module.exports = app => {
   app.router.get('/api/current_user', 'user.getCurrentUser');
 
   app.router.get('/api/robot_list', 'robot.getRobotList');
+  app.router.post('/api/robot', 'robot.setRobot');
 };
